@@ -1,6 +1,6 @@
-This profile provides a base configuration for PingFederate.
+This profile provides a configuration of Ping software that can be used to implement a WorkForce solution.
 
-It is designed to be used in conjunction with a PD-Base Profile (https://github.com/cprice-ping/PD-Base).
+![Solution - WorkForce]solution-workforce.png
 
 ## Deployment
 * Copy the `docker-compose.yaml` and `env_vars` files to a folder

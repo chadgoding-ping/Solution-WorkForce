@@ -1,6 +1,6 @@
 This profile provides a base configuration for PingFederate.
 
-It is designed to be used in conjunction with my PD-Base Profile (https://github.com/cprice-ping/PD-Base).
+It is designed to be used in conjunction with a PD-Base Profile (https://github.com/cprice-ping/PD-Base).
 
 ## Deployment
 * Copy the `docker-compose.yaml` and `env_vars` files to a folder
@@ -19,7 +19,6 @@ This configuration includes:
 
 ### Adapters
 * HTML Form
-* HTML Form with LIP
 * Identifier-First (Passwordless)
 * PingID
 
@@ -31,9 +30,7 @@ For this Profile, you can place the `base64` encoded text from a `pingid.propert
 
 ### Authentication Policy
 Extended Property Selector
-  * Basic (HTML Form)
-  * Enhanced (HTML Form with LIP)
-  * MFA (Enhanced --> PingID)
+  * Basic (HTML Form --> PingID)
   * Passwordless (ID-First --> PingID)
 
 The Authentication Experience is controlled by setting the `Extended Properties` on the Application.  
@@ -42,9 +39,7 @@ Authentication API
 * HTML Form with LIP --> AuthN API Explorer  
 
 ### Extended Properties
-* `Basic` (Plain HTML Form)
-* `Enhanced` (HTML Form with LIP -- Google & Facebook buttons [not configured])
-* `MFA` (HTML Form with LIP --> PingID adapter)
+* `Basic` (Plain HTML Form --> PingID)
 * `Passwordless` (ID-First --> PingID)
 * _Anything Else_ (AuthN API Explorer)
 

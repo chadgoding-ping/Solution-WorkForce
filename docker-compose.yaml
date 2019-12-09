@@ -8,7 +8,7 @@ services:
       - ~/.pingidentity/devops
       - ./env_vars
     environment:
-    - SERVER_PROFILE_URL=https://github.com/cprice-ping/Profile-PF-Base.git
+    - SERVER_PROFILE_URL=https://github.com/cprice-ping/Solution-Workforce.git
     - SERVER_PROFILE_PATH=pingfed
     #volumes:
     #  - ${HOME}/projects/devops/volumes/full-stack.pingfederate:/opt/out
@@ -26,7 +26,7 @@ services:
       - ~/.pingidentity/devops
       - ./env_vars
     environment:
-    - SERVER_PROFILE_URL=https://github.com/cprice-ping/Profile-PD-Base.git
+    - SERVER_PROFILE_URL=https://github.com/cprice-ping/Solution-Workforce.git
     - SERVER_PROFILE_PATH=pingdir
 
     #volumes:

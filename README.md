@@ -1,6 +1,6 @@
 This profile provides a configuration of Ping software that can be used to implement a WorkForce solution.
 
-![Solution - WorkForce]solution-workforce.png
+![Solution - WorkForce](solution-workforce.png)
 
 ## Deployment
 * Copy the `docker-compose.yaml` and `env_vars` files to a folder

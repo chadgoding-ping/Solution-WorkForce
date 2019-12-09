@@ -7,8 +7,6 @@
     <urn:Tables/>
     <urn:ExtendedContractAttributes>
         <urn:AttributeName>Basic</urn:AttributeName>
-        <urn:AttributeName>Enhanced</urn:AttributeName>
-        <urn:AttributeName>MFA</urn:AttributeName>
         <urn:AttributeName>Passwordless</urn:AttributeName>
     </urn:ExtendedContractAttributes>
 </urn:PluginConfiguration>

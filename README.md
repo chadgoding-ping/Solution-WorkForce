@@ -35,9 +35,10 @@ In PF, go to `System --> Connect to PingOne for Enterprise` and select the `Sign
 Logon to PingOne for Enterprise and copy the Activation Key that should be presented. This key should be pasted into PF to begin the integration process.
 
 **[Notes]**
-* When prompted to create a Directory Server, press the `Begin` button (one is created as part of this Solution)
+* When prompted to for a Directory Server, Select `Yes` and press the `Begin` button to conenct the one is created as part of this Solution
 * Uncheck the `Outbound Provisioning` checkbox if you don't want to configure this.
 * For the Extended Properties -- type `Basic` or `Passwordless` (depending on what journey you want a User Authentication to take)
+* Use the `Default Policy Contract` to Map values into the Connection
 
 ### Authentication Policy
 Extended Property Selector

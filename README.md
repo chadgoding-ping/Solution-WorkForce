@@ -48,7 +48,7 @@ Extended Property Selector
 The Authentication Experience is controlled by setting the `Extended Properties` on the Application.  
 
 Authentication API
-* HTML Form with LIP --> AuthN API Explorer  
+* HTML Form --> AuthN API Explorer  
 
 ### Extended Properties
 * `Basic` (Plain HTML Form --> PingID)

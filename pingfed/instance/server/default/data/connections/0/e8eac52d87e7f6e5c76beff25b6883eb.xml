@@ -27,6 +27,10 @@
                     <urn:C2cContractToAssertionMapping AbortIfNotFoundInAnyDataSources="false" RestrictVirtualServerIds="false" C2cContractId="hRsB6datB6BJplah" C2cContractName="Default Policy Contract">
                         <urn:DefaultAttributeMapping>
                             <urn:AttributeMap Name="SAML_SUBJECT" Type="Authentication Policy Contract" Value="entryUUID"/>
+                            <urn:AttributeMap Name="fname" Type="Authentication Policy Contract" Value="givenName"/>
+                            <urn:AttributeMap Name="lname" Type="Authentication Policy Contract" Value="sn"/>
+                            <urn:AttributeMap Name="email" Type="Authentication Policy Contract" Value="mail"/>
+                            <urn:AttributeMap Name="memberOf" Type="Authentication Policy Contract" Value="isMemberOf"/>
                             <urn:TokenAuthorizationIssuanceCriteria/>
                         </urn:DefaultAttributeMapping>
                     </urn:C2cContractToAssertionMapping>

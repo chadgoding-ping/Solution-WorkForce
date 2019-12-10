@@ -1,11 +1,13 @@
 $Password = Read-Host -Prompt 'Enter SafeMode Admin Password' -AsSecureString
+$domainName = 'ping-demos.com'
+$netbiosName = 'pingdemos'
 
 $Params = @{
     CreateDnsDelegation = $false
     DatabasePath = 'C:\Windows\NTDS'
     DomainMode = 'WinThreshold'
-    DomainName = 'ping-demos.com'
-    DomainNetbiosName = 'ad01'
+    DomainName = $domainName
+    DomainNetbiosName = $netbiosName
     ForestMode = 'WinThreshold'
     InstallDns = $true
     LogPath = 'C:\Windows\NTDS'

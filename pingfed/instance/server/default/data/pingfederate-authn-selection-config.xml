@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AuthnSelectionConfig lastModifiedMillis="1575930796791" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
+<urn:AuthnSelectionConfig lastModifiedMillis="1576027720215" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
     <urn:AuthnSelectionTrees>
         <urn:AuthnSelectionTree treeName="Default AuthN Policy" disabled="false" authnApiApp="">
             <urn:AstRoot context="">
@@ -16,7 +16,7 @@
                         <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AuthnSourceKey type="ADAPTER">PingID</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
-                            <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLForm" Value="entryUUID"/>
+                            <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLForm" Value="userPrincipalName"/>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -24,9 +24,12 @@
                         <urn:AstChild context="Success">
                             <urn:AstAction apcId="hRsB6datB6BJplah" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                                 <urn:AttributeMapping>
-                                    <urn1:AttributeMap Name="entryUUID" Type="Adapter" AttributeSourceId="HTMLForm" Value="entryUUID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                     <urn1:AttributeMap Name="mail" Type="Adapter" AttributeSourceId="HTMLForm" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                     <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="HTMLForm" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="givenName" Type="Adapter" AttributeSourceId="HTMLForm" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="ms-ds-ConsistencyGUID" Type="Adapter" AttributeSourceId="HTMLForm" Value="ms-ds-ConsistencyGUID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="memberOf" Type="Adapter" AttributeSourceId="HTMLForm" Value="memberOf" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="sn" Type="Adapter" AttributeSourceId="HTMLForm" Value="sn" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                     <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 </urn:AttributeMapping>
                             </urn:AstAction>
@@ -45,7 +48,7 @@
                         <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AuthnSourceKey type="ADAPTER">PingID</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
-                            <urn:InputIdMapping Type="Adapter" AttributeSourceId="IDFirst" Value="entryUUID"/>
+                            <urn:InputIdMapping Type="Adapter" AttributeSourceId="IDFirst" Value="subject"/>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -53,9 +56,12 @@
                         <urn:AstChild context="Success">
                             <urn:AstAction apcId="hRsB6datB6BJplah" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                                 <urn:AttributeMapping>
-                                    <urn1:AttributeMap Name="entryUUID" Type="Adapter" AttributeSourceId="IDFirst" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                     <urn1:AttributeMap Name="mail" Type="Adapter" AttributeSourceId="IDFirst" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                     <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="IDFirst" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="givenName" Type="Adapter" AttributeSourceId="IDFirst" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="ms-ds-ConsistencyGUID" Type="Adapter" AttributeSourceId="IDFirst" Value="domain" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="memberOf" Type="Adapter" AttributeSourceId="IDFirst" Value="memberOf" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="sn" Type="Adapter" AttributeSourceId="IDFirst" Value="sn" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                     <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 </urn:AttributeMapping>
                             </urn:AstAction>
@@ -76,9 +82,12 @@
                 <urn:AstChild context="Success">
                     <urn:AstAction apcId="hRsB6datB6BJplah" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AttributeMapping>
-                            <urn1:AttributeMap Name="entryUUID" Type="Adapter" AttributeSourceId="HTMLForm" Value="entryUUID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             <urn1:AttributeMap Name="mail" Type="Adapter" AttributeSourceId="HTMLForm" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="HTMLForm" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            <urn1:AttributeMap Name="givenName" Type="Adapter" AttributeSourceId="HTMLForm" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            <urn1:AttributeMap Name="ms-ds-ConsistencyGUID" Type="Adapter" AttributeSourceId="HTMLForm" Value="ms-ds-ConsistencyGUID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            <urn1:AttributeMap Name="memberOf" Type="Adapter" AttributeSourceId="HTMLForm" Value="memberOf" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            <urn1:AttributeMap Name="sn" Type="Adapter" AttributeSourceId="HTMLForm" Value="sn" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                         </urn:AttributeMapping>
                     </urn:AstAction>

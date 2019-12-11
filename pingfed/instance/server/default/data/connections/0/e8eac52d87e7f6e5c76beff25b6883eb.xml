@@ -20,17 +20,17 @@
     </md:Extensions>
     <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" AuthnRequestsSigned="false" WantAssertionsSigned="false" SignResponseAsRequired="true">
         <md:Extensions>
-            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2019-11-06T01:21:00.507Z">
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2019-12-11T01:30:17.077Z">
                 <urn:IncomingBindings Artifact="true" POST="true" Redirect="true" SOAP="true"/>
                 <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="false" SPInitiatedSSO="false" SPInitiatedSLO="false"/>
                 <urn:SP AssertionValidityAfterMinutes="5" AssertionValidityBeforeMinutes="5" ConnectionTargetType="Standard" EnableCDCDuringSSO="false">
                     <urn:C2cContractToAssertionMapping AbortIfNotFoundInAnyDataSources="false" RestrictVirtualServerIds="false" C2cContractId="hRsB6datB6BJplah" C2cContractName="Default Policy Contract">
                         <urn:DefaultAttributeMapping>
-                            <urn:AttributeMap Name="SAML_SUBJECT" Type="Authentication Policy Contract" Value="entryUUID"/>
                             <urn:AttributeMap Name="fname" Type="Authentication Policy Contract" Value="givenName"/>
                             <urn:AttributeMap Name="lname" Type="Authentication Policy Contract" Value="sn"/>
-                            <urn:AttributeMap Name="email" Type="Authentication Policy Contract" Value="mail"/>
-                            <urn:AttributeMap Name="memberOf" Type="Authentication Policy Contract" Value="isMemberOf"/>
+                            <urn:AttributeMap Name="mail" Type="Authentication Policy Contract" Value="mail"/>
+                            <urn:AttributeMap Name="memberOf" Type="Authentication Policy Contract" Value="memberOf"/>
+                            <urn:AttributeMap Name="SAML_SUBJECT" Type="Authentication Policy Contract" Value="subject"/>
                             <urn:TokenAuthorizationIssuanceCriteria/>
                         </urn:DefaultAttributeMapping>
                     </urn:C2cContractToAssertionMapping>

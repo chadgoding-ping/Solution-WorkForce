@@ -91,6 +91,7 @@ Flows:
 `client_secret` == 2FederateM0re
 
 ### Users
-If you are using the BASELINE PingDirectory image, the credentials you can use for these applications are:
+If you are using the AD Configuration in this repo, the following users can be used to test with:
 
-`user.[0-4]` / `2FederateM0re`
+`pinguser1` / `2FederateM0re`  
+`pinguser2` / `2FederateM0re`

@@ -27,6 +27,9 @@ The PingID adapter uses the secrets from your PingID tenant to create the proper
 
 For this Profile, you can place the `base64` encoded text from a `pingid.properties` file that will be placed into the PingID Adapter settings 
 
+## Post-Deployment Steps
+It's not possible to fully automate the implementation of this Solution. There are additional steps needed to be performed manually after things are running:
+
 ### PingOne for Enterprise
 In order to connect this PF instance to PingOne for Enterprise, you will need a P14E tenant. This process is somewhat automated through a Wizard, but cannot be automated in this Solution Profile.
 
@@ -39,6 +42,13 @@ Logon to PingOne for Enterprise and copy the Activation Key that should be prese
 * Uncheck the `Outbound Provisioning` checkbox if you don't want to configure this.
 * For the Extended Properties -- type `Basic` or `Passwordless` (depending on what journey you want a User Authentication to take)
 * Use the `Default Policy Contract` to Map values into the Connection
+
+### PingID for Self Service Password Reset
+The HTML Form adapter stores the PID Properties as an encrypted JWT, unlike the PID Adapter that uses a base64 encoding. This means that you need to manually import your PID Properties file into the HTML Form.
+
+**Note**: The PID Properties upload is in the `Advanced` Properties of the Adapter, not near the SSPR settings.
+  
+You will also need to enable PingID as the SSPR method -- the Adapter won't save without the PID Properties. 
 
 ### Authentication Policy
 Extended Property Selector

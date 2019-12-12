@@ -1,6 +1,6 @@
 $Password = Read-Host -Prompt 'Enter SafeMode Admin Password' -AsSecureString
-$domainName = 'ping-demos.com'
-$netbiosName = 'pingdemos'
+$domainName = 'workforce.com'
+$netbiosName = 'workforce'
 
 $Params = @{
     CreateDnsDelegation = $false
@@ -18,6 +18,3 @@ $Params = @{
 }
 
 Install-ADDSForest @Params
-
-# Relax the default Password Policy
-Set-ADDefaultDomainPasswordPolicy -Identity ping-demos.com -LockoutDuration 00:40:00 -LockoutObservationWindow 00:20:00 -ComplexityEnabled $false -ReversibleEncryptionEnabled $False -MaxPasswordAge 0 -MinPasswordAge 0 -PasswordHistoryCount 0

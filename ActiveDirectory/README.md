@@ -15,12 +15,24 @@ Passwords for Users are `2FederateM0re`
   
 The Certificate Authority is used by the Domain Controller to get certificates used by LDAPS, and future use cases for Win10 Devices or User Certs (i.e. Smart Cards)
 
-An implementation of ActiveDirectory with these commands has been performed:  
+**DNS Considerations**  
+If you are going to be using AD Domain Joined computers (i.e. to demonstrate Kerberos integration), you should call the AD Forest \ Domain something *other* than `ping-demos.com`.  
 
-* Forest Name: `ping-demos.com`
-* Root DN: `dc=ping-demos,dc=com`
-* NetBIOS Name: `pingdemos`
-* Domain Controller DNS: `int-ad.solution-wf.ping-eng.com`
+This will allow those computers to be able to resolve the PF URL via the DNS Forwarding being done by the Windows DNS server.  
+
+Without this, you will need to add an `A` record to the DNS Server that points to your PF Host & IP address.
+
+**Scalr Implementation**  
+An implementation of ActiveDirectory with these commands has been performed in Ping's Scalr instance:  
+
+| Name | Value |
+| --- | --- | 
+| Forest Name | `workforce.com` |
+| Root DN | `dc=workforce,dc=com` |
+| NetBIOS Name | `workforce` |
+| Domain Controller DNS | `int-ad.solution-wf.ping-eng.com`
+
+**Note:** This is only available via Ping's VPN, and other Ping Scalr hosts.
 
 **Service Principal Name**  
 A SPN has been added to the `pingfederate` account to allow Kerberos from `workforce-pf.ping-demos.com`

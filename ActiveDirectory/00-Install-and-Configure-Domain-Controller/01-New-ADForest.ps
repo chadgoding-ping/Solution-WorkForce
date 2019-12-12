@@ -18,3 +18,6 @@ $Params = @{
 }
 
 Install-ADDSForest @Params
+
+# Relax the default Password Policy
+Set-ADDefaultDomainPasswordPolicy -Identity ping-demos.com -LockoutDuration 00:40:00 -LockoutObservationWindow 00:20:00 -ComplexityEnabled $false -ReversibleEncryptionEnabled $False -MaxPasswordAge 0 -PasswordHistoryCount 0

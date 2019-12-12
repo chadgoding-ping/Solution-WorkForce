@@ -4,3 +4,5 @@ $defaultPassword = ConvertTo-SecureString -String "P@ssword99" -AsPlainText -For
 New-ADUser -Name "pingfederate"  -GivenName "Ping" -Surname "Federate" -DisplayName "Ping Federate Service" -userPrincipalName "pingfederate@ping-demos.com" -Enabled $true -AccountPassword $defaultPassword -Path $ou
 
 Set-ADUser -Identity "pingfederate" -ServicePrincipalNames @{Add="HTTP/workforce-pf.ping-demos.com"}
+
+Add-ADGroupMember -Identity "Account Operators" -Members pingfederate

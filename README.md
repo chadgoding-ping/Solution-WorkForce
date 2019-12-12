@@ -77,7 +77,7 @@ Authentication API
 Two applications are pre-wired:
 
 **SAML:**  
-https://${PF_BASE_URL}/idp/startSSO.ping?PartnerSpId=Dummy-SAML
+<https://${PF_BASE_URL}/idp/startSSO.ping?PartnerSpId=Dummy-SAML>
 
 **OAuth \ OIDC:**   
 Flows:

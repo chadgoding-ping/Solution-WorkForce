@@ -9,7 +9,7 @@ The first collection is to create the AD Forest, Add AD Domain Services (i.e. a 
   
 Passwords for Users are `2FederateM0re`
 
-Note: these users are created with the commands in:  
+**Note:** these users are created with the commands in:  
 * [11-Create-PingServiceUser.ps](ActiveDirectory/00-Install-and-Configure-Domain-Controller/11-Create-PingServiceUser.ps)
 * [15-Create-PingUsers.ps](ActiveDirectory/00-Install-and-Configure-Domain-Controller/15-Create-PingUsers.ps)
   

@@ -9,7 +9,7 @@
         <urn:Field name="Display Name Attribute">displayName</urn:Field>
         <urn:Field name="Mail Attribute">mail</urn:Field>
         <urn:Field name="SMS Attribute"/>
-        <urn:Field name="PingID Username Attribute"/>
+        <urn:Field name="PingID Username Attribute">userPrincipalName</urn:Field>
         <urn:Field name="Mail Search Filter"/>
         <urn:Field name="Username Attribute"/>
         <urn:Field name="Mail Verified Attribute"/>
@@ -19,7 +19,7 @@
         <urn:Field name="Display Name Attribute">displayName</urn:Field>
         <urn:Field name="Mail Attribute">mail</urn:Field>
         <urn:Field name="SMS Attribute"/>
-        <urn:Field name="PingID Username Attribute"/>
+        <urn:Field name="PingID Username Attribute">userPrincipalName</urn:Field>
         <urn:Field name="Mail Search Filter"/>
         <urn:Field name="Username Attribute"/>
         <urn:Field name="Mail Verified Attribute"/>

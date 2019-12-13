@@ -16,7 +16,7 @@ Passwords for Users are `2FederateM0re`
 The Certificate Authority is used by the Domain Controller to get certificates used by LDAPS, and future use cases for Win10 Devices or User Certs (i.e. Smart Cards)
 
 **DNS Considerations**  
-If you are going to be using AD Domain Joined computers (i.e. to demonstrate Kerberos integration), you should call the AD Forest \ Domain something *other* than `ping-demos.com`.  
+If you are going to be using AD Domain Joined computers (i.e. to demonstrate Kerberos integration), you should call the AD Forest \ Domain something *other* than your PF host domain (in my build this is `ping-demos.com`).  
 
 This will allow those computers to be able to resolve the PF URL via the DNS Forwarding being done by the Windows DNS server.  
 

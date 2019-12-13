@@ -113,7 +113,7 @@ If you want to demo Kerberos, you can do that too:
 * Point your Windows OS DNC Client to the Domain Controller IP Address
 * Join the Windows client to your Domain
 * Logon to the Windows Client with a Domain User
-* Add your PingFed host to the Intranet Zone of IE (You can do this in Powershell -- [100-Configure-IntranetSites-in-IE.ps](ActiveDirectory\100-Configure-IntranetSites-in-IE.ps))
+* Add your PingFed host to the Intranet Zone of IE (You can do this in Powershell -- [100-Configure-IntranetSites-in-IE.ps](ActiveDirectory/100-Configure-IntranetSites-in-IE.ps))
 * If you want to use Edge -- Import the IE settings (Settings --> Import --> IE)
 * Set your PF Connection --> Extended Properties to `Kerberos`
 * If you see a pop-up -- you've missed a step in the configuration

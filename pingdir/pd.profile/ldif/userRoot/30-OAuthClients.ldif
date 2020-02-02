@@ -1,3 +1,8 @@
+dn: ou=oauthClients,${USER_BASE_DN}
+objectClass: top
+objectClass: organizationalUnit
+ou: oauthClients
+
 dn: pf-oauth-client-id=PingAccessSession,ou=oauthClients,${USER_BASE_DN}
 objectClass: top
 objectClass: pf-oauth-client
